@@ -30,8 +30,8 @@ int main(int argc, const char * argv[]) {
         JJSContainer *container = [[JJSContainer alloc] init];
        
         [container setContainerName:@"Jay's Container"];
-        [container addItem:[JJSItem randomItem];
-         [container addItem:[JJSItem randomItem];
+        [container addItem:[JJSItem randomItem]];
+         [container addItem:[JJSItem randomItem]];
           
           JJSContainer *superContainer = [[JJSContainer alloc] init];
           [superContainer setContainerName:@"Jays Super Container"];
@@ -39,12 +39,12 @@ int main(int argc, const char * argv[]) {
           [superContainer addItem:[JJSItem randomItem]];
           
           JJSContainer *superSuperContainer = [[JJSContainer alloc] init];
-          [superSuperContainer setContaingerName:@"Jay's Super Super Containter"];
+          [superSuperContainer setContainerName:@"Jay's Super Super Containter"];
           [superSuperContainer addItem:superContainer];
           
-          NSlog(@"Jay's Container:%@", container);
+          NSLog(@"Jay's Container:%@", container);
           NSLog(@"Jay's Super Container:%@", superContainer);
-          NSlog(@"Jay's Super Super Container:%@",superSuperContainer);
+          NSLog(@"Jay's Super Super Container:%@",superSuperContainer);
           
         items = nil;
     }

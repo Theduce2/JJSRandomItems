@@ -15,12 +15,12 @@
     NSString *_containerName;
 }
 
--(void)setContaninerName:(NSString *)str;
+-(void)setContainerName:(NSString *)str;
 -(NSString *)containerName;
 
 -(NSArray *)items;
 
--(void)AddItem:(JJSItem *)item;
+-(void)addItem:(JJSItem *)item;
 -(JJSItem *)itemAtIndex:(int)index;
 
 -(int)valueInDollars;
