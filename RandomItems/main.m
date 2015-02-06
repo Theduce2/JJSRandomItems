@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
         // needed to see variables.
 #import "JJSItem.h"
-
+#import "JJSContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -19,13 +19,34 @@ int main(int argc, const char * argv[]) {
         for (int i=0; i < 10; i++) {
             JJSItem  *item = [JJSItem randomItem];
             [items addObject:item];
+         
         }
         
         for (JJSItem *item in items){
             NSLog(@"%@",item);
+            
         }
         
-       items = nil;
+        JJSContainer *container = [[JJSContainer alloc] init];
+       
+        [container setContainerName:@"Jay's Container"];
+        [container addItem:[JJSItem randomItem];
+         [container addItem:[JJSItem randomItem];
+          
+          JJSContainer *superContainer = [[JJSContainer alloc] init];
+          [superContainer setContainerName:@"Jays Super Container"];
+          [superContainer addItem:container];
+          [superContainer addItem:[JJSItem randomItem]];
+          
+          JJSContainer *superSuperContainer = [[JJSContainer alloc] init];
+          [superSuperContainer setContaingerName:@"Jay's Super Super Containter"];
+          [superSuperContainer addItem:superContainer];
+          
+          NSlog(@"Jay's Container:%@", container);
+          NSLog(@"Jay's Super Container:%@", superContainer);
+          NSlog(@"Jay's Super Super Container:%@",superSuperContainer);
+          
+        items = nil;
     }
     
     

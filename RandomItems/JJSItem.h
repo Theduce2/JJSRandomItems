@@ -21,6 +21,19 @@
 
 +(instancetype)randomItem;
 
+
+//Two additional initializers.  Each initlilzer begins with init.  The return type for these initilizers is instance type.  init methods are always declared to return instancetype.  These are the designated initlizers.
+- (instancetype)initWithItemName:(NSString *)name
+                  valueInDollars:(int)value
+                    serialNumber:(NSString *)sNumber;
+
+-(instancetype)initWithName:(NSString *)name
+                   serialNumber:(NSString *)sNumber;
+
+-(instancetype)initWithItemName:(NSString *)name;
+
+
+
     //setter method =set plus Cap name of instance variable.  The getter is just the name
 -(void)setItemName:(NSString *)str;
 -(NSString *)itemName;
@@ -32,14 +45,8 @@
 -(int)valueInDollars;
 
 -(NSDate *)dateCreated;
-+ (instancetype)RandomItem;
-//Two additional initializers.  Each initlilzer begins with init.  The return type for these initilizers is instance type.  init methods are always declared to return instancetype
-- (instancetype)initWithItemName:(NSString *)name
-                  valueInDollars:(int)value
-                    serialNumber:(NSString *)sNumber;
 
--(instancetype)initWithItemName:(NSString *)name;
 
-//-(void)setItemName:(NSString *)str;
+
 
 @end
